@@ -1,0 +1,190 @@
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+
+
+/*EPL THEME COLOR*/
+$epl-blue: #04f5ff;
+$epl-red: #e90052;
+$epl-white: #ffffff;
+$epl-green: #00ff85;
+$epl-black: #38003c;
+$epl-yellow: #EAFF04;
+/*EPL THEME COLOR*/
+
+.header {
+	background-color: $epl-green;
+	display: flex;
+
+	.header_logo {
+		width: 100px;
+		height: 100px;
+		padding: 16px 48px;
+	}
+
+	h1 {
+		display: inline-block;
+		color: $epl-black;
+		font-size: 48px;
+		margin: auto;
+		margin-left: 0;
+	}
+}
+
+.navigator {
+	width: 100%;
+	top: 0;
+	position: sticky;
+	z-index: 1000;
+	background-color: $epl-black;
+}
+
+.navigator span {
+	border-right: solid $epl-white 1px;
+	display: inline-block;
+	cursor: pointer;
+	padding: 16px;
+	text-decoration: none;
+	font-weight: bold;
+	color: $epl-white;
+
+	&:active {
+		background-color: $epl-white;
+		color: $epl-black;
+	}
+
+	&.active_link {
+		background-color: $epl-white;
+		color: $epl-black;
+	}
+}
+
+
+.content {
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-bottom: 15%;
+	margin-top: 48px;
+	width: 70%;
+}
+
+.predicted_match_container {
+	margin-bottom: 12px;
+}
+
+.prob_title {
+	display: inline-block;
+	width: 100%;
+	background-color: rgb(234, 234, 234);
+	padding-top: 8px;
+	padding-bottom: 8px;
+
+	.prob_vs {
+		padding-left: 16px;
+		font-size: 18px;
+	}
+	.prob_date {
+		float: right;
+		padding-right: 16px;
+	}
+}
+
+.prob_bar {
+	width: 100%;
+
+	span {
+		display: inline-block;
+		text-align: center;
+		padding-top: 8px;
+		padding-bottom: 8px;
+
+		&.home_prob {
+			background-color: $epl-blue;
+		}
+		&.away_prob {
+			background-color: $epl-green;
+		}
+		&.draw_prob {
+			background-color: $epl-black;
+			color: $epl-white;
+		}
+	}
+}
+
+.previous_match_container {
+	width: 100%;
+	background-color: $epl-white;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-bottom: solid rgb(234, 234, 234) 1px;
+
+	&:hover {
+		background-color: rgb(234, 234, 234);
+	}
+	.match_result {
+		padding-left: 64px;
+	}
+	.match_result_date {
+		float: right;
+		padding-right: 16px;
+	}
+	.match_result_team_name {
+		font-size: 18px;
+		width: 160px;
+		max-width: 160px;
+		display: inline-block;
+		&.team_home {
+			text-align: right;
+		}
+		&.team_won {
+			font-weight: bold;
+		}
+	}
+	.match_score {
+		background-color: $epl-black;
+		color: $epl-white;
+		padding: 3px 16px;
+		margin: 0 8px;
+	}
+}
+
+.content_header {
+	padding-bottom: 8px;
+	border-bottom: solid rgb(234, 234, 234) 2px; 
+}
+
+.home {
+	a {
+		text-decoration: none;
+	}
+}
